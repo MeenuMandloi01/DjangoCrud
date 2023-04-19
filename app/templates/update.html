@@ -1,0 +1,29 @@
+{% include "base.html" %}
+{% block body %}
+<h1>update</h1>
+<form method="post">
+    {% csrf_token %}
+    
+    <div>
+        <input type="hidden" name="id" value="{{student.id}}">
+        <label for="">Name</label>
+        <input type="text" name="name"  class="form-control" value="{{student.name}}">
+    </div>
+    <div>
+        <label for="">Email</label>
+        <input type="email" name="email"  class="form-control" value="{{student.email}}">
+    </div>
+    <div>
+        <label for="">Contact</label>
+        <input type="phone" name="contact"  class="form-control" value="{{student.contact}}">
+    </div>
+    <div>
+        <label for="">Address</label>
+        <input type="text" name="address"  class="form-control" value="{{student.address}}">
+    </div>
+    <div>
+        <input type="submit" value="Submit"  class="btn btn-success">
+    </div>
+   
+</form>
+{% endblock body %}

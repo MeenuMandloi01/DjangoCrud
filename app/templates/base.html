@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Stu/css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container">  
+        <h1 class="text-center alert alert-danger">Django Crud Project</h1>
+        {% block body %}
+          
+        {% endblock body %}
+    </div>
+    
+</body>
+</html>
